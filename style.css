@@ -29,7 +29,7 @@ body {
 .container_grid {
   display: grid;
   gap: 1.5rem;
-  width: min(90%, 70rem);
+  width: min(90%, 80rem);
   padding: 4rem 0;
 
   grid-template-areas:
@@ -68,6 +68,7 @@ body {
 
 @media (min-width: 45em) {
   .container_grid {
+    padding: 10rem 0;
     grid-template-areas:
       "one two"
       "five five"
@@ -77,6 +78,7 @@ body {
 
 @media (min-width: 65em) {
   .container_grid {
+    padding: 10rem 0;
     grid-template-areas:
       "one one two five"
       "three four four five";
@@ -124,6 +126,8 @@ body {
 
 .testemonial_container > p:not([class]) {
   opacity: 70%;
+  font-weight: var(--wght_500);
+  font-size: 0.8125rem;
 }
 /*settings_BG*/
 .testemonial_Bg_moderateViolet {
@@ -142,5 +146,5 @@ body {
 .quotation_marks {
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-position: top right 10%;
+  background-position: top right 20%;
 }
