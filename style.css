@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --Moderate-violet: #7541c8;
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(217, 30%, 14%);
+  --White: #ffffff;
+  --Light-gray: #cfcfcf;
+  --Light-grayish-blue: #ecf2f8;
+
+  --font_Barlow: "Barlow Semi Condensed", serif;
+  --wght_500: 500;
+  --wght_600: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font_Barlow);
+  color: var(--Light-grayish-blue);
+  background-color: var(--Light-grayish-blue);
+  display: grid;
+  place-items: center;
+}
+
+.container_grid {
+  display: grid;
+  gap: 1.5rem;
+  width: min(90%, 70rem);
+  padding: 4rem 0;
+
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+}
+
+.testemonial {
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--Very-dark-grayish-blue) / 0.25);
+}
+
+.testemonial:nth-child(1) {
+  grid-area: one;
+}
+
+.testemonial:nth-child(2) {
+  grid-area: two;
+}
+
+.testemonial:nth-child(3) {
+  grid-area: three;
+}
+
+.testemonial:nth-child(4) {
+  grid-area: four;
+}
+
+.testemonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media (min-width: 45em) {
+  .container_grid {
+    grid-template-areas:
+      "one two"
+      "five five"
+      "three four";
+  }
+}
+
+@media (min-width: 65em) {
+  .container_grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+.container_user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container_user img {
+  width: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.violet_border {
+  border: 2px solid #7541c8;
+}
+
+.color_grayish {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.username {
+  font-size: 0.8125rem;
+}
+
+.user_role {
+  font-size: 0.8125rem;
+  opacity: 50%;
+}
+
+.testemonial_container {
+  margin-top: 1.5rem;
+}
+
+.testemonial_header {
+  font-weight: var(--wght_600);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.testemonial_container > p:not([class]) {
+  opacity: 70%;
+}
+/*settings_BG*/
+.testemonial_Bg_moderateViolet {
+  background-color: var(--Moderate-violet);
+}
+.testemonial_Bg_darkGrayish {
+  background-color: var(--Very-dark-grayish-blue);
+}
+.testemonial_Bg_darkblackish {
+  background-color: var(--Very-dark-blackish-blue);
+}
+.testemonial_Bg_White {
+  background-color: var(--White);
+}
+
+.quotation_marks {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
